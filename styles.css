@@ -180,21 +180,18 @@ section .right-side button:hover {
   .topnav a:not(:first-child) {
     display: none;
   }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
+
   .topnav.responsive {
     position: relative;
   }
   .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+    width: 20%;
+    justify-content: center;
   }
   .topnav.responsive li {
     float: none;
     display: block;
+    opacity: 0.6;
   }
 }
 
