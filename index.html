@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav>
+        <div class="logo">
+          Modern website
+        </div>
+        <div class="menu">
+          <ul id="myTopnav"  class="topnav">
+            <li>home</li>
+            <li>Services</li>
+            <li>About us</li>
+            <li>contactt us</li>
+            <li>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section>
+        <div class="left-side">
+          <img
+            class="responsive-image"
+            src="images/app-development-isometric-landing-page-vector-template_9209-2666.jpg"
+            alt="Vector images"
+            width="600px"
+            height="400"
+          />
+        </div>
+        <div class="right-side">
+          <h1>our modern website</h1>
+          <p>We are best website development company!</p>
+          <button>welcome</button>
+        </div>
+      </section>
+    </header>
+  </body>
+</html>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    console.log("hello" + x.className);
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>

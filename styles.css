@@ -1,0 +1,219 @@
+/**
+*resetting browser default styles
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* text */
+  --text-base: 16px;
+  --text-scale: 1.2em;
+
+  --text-sm: calc(var(--text-base) / var(--text-scale) * var(--text-scale));
+  --text-md: calc(var(--text-base) / var(--text-scale));
+  --text-lg: calc(var(--text-base));
+
+  /* color */
+  --primary-color: #00c6a7;
+  --secondary-color: #1e4d92;
+}
+
+/* centering element */
+body {
+  margin: auto;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--text-lg);
+}
+
+.site-header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    57deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%);
+  /* min-width: 704px; */
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.logo {
+  width: 30%;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 20px 10px;
+}
+.logo img {
+  max-width: 100%;
+  min-width: 40%;
+  height: auto;
+}
+
+.menu {
+  width: 70%;
+}
+.menu ul li:fisrt-child {
+  display: none;
+}
+.menu ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.menu ul li:last-child {
+  display: none;
+}
+.menu ul li {
+  list-style: none;
+  width: 100%;
+  height: 30px;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+
+  text-align: center;
+  line-height: 30px;
+}
+.menu ul li:hover {
+  background: linear-gradient(57deg, #1e4d92, #00c6a7);
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+section .left-side {
+  margin-left: 30px;
+  width: 45%;
+}
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+section .right-side {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  justify-content: center;
+  align-items: center;
+}
+
+section .right-side h1 {
+  text-transform: uppercase;
+  color: #fff;
+}
+section .right-side p {
+  padding: 10px 0;
+  color: #fff;
+}
+section .right-side button {
+  text-transform: uppercase;
+  background: linear-gradient(57deg, #1e4d92, #00c6a7);
+  color: #fff;
+  border-color: aliceblue;
+  border-radius: 12px;
+  padding: 7px;
+}
+section .right-side button:hover {
+  background: linear-gradient(57deg, #00c6a7, #1e4d92);
+}
+
+/* mobile first responsive design */
+
+@media screen and (max-width: 704px) {
+  nav,
+  .menu ul {
+    flex-direction: column;
+  }
+  .logo {
+    display: none;
+    font-size: 1em;
+  }
+  .menu {
+    width: 100%;
+  }
+  .menu ul {
+    width: 100%;
+  }
+  .menu ul li {
+    display: none;
+  }
+  .responsive-link {
+    display: block;
+  }
+
+  .menu ul li {
+    display: none;
+  }
+  .menu ul li .men-link {
+    display: block;
+  }
+  .menu ul li:first-child {
+    display: inline-block;
+  }
+  .menu ul li:last-child {
+    display: inline-flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    justify-content: center;
+  }
+
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive li {
+    float: none;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    flex-direction: column;
+    color: black;
+  }
+  section .right-side {
+    width: 100%;
+    /* background-color: blueviolet; */
+  }
+  section .left-side {
+    width: 100%;
+    /* background-color: blue; */
+  }
+  .site-header {
+    clip-path: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
